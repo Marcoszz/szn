@@ -5,17 +5,20 @@ import useApp from "./hooks/useHome";
 
 function App() {
   const {handleDesfazer, handleRefazer, handleClickDiv, dots} = useApp();
+  console.log(dots)
   return (
     <Fragment >
       <div className="buttonContainer">
-        <button onClick={handleDesfazer}>
-          Desfazer
-        </button>
-        <button onClick={handleRefazer}>
-          Refazer
-        </button>
-      </div>
+      <button onClick={handleDesfazer}>
+        Desfazer
+      </button>
+      <button onClick={handleRefazer}>
+        Refazer
+      </button>
+    </div>
+    
     <div className="container" onClick={handleClickDiv}>
+    
       {dots.map((dot) => <Dot x={dot.x} y={dot.y}/>)}
     </div>
     </Fragment>

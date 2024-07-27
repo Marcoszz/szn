@@ -1,13 +1,9 @@
 import { MouseEvent, useState } from "react"
-
-export type Dot = {
-    x: number,
-    y: number
-}
+import { TDot } from "../../../types"
 
 const useApp = () => {
-    const [dots, setDots] = useState<Dot[]>([])
-    const [lastDot, setLastDot] = useState<Dot[]>([])
+    const [dots, setDots] = useState<TDot[]>([])
+    const [lastDot, setLastDot] = useState<TDot[]>([])
 
     const handleRefazer = () => {
         const cLastDot = lastDot.pop()

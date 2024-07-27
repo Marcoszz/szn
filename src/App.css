@@ -12,11 +12,3 @@
   display: flex;
   gap: 16px;
 }
-
-.dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background-color: aqua;
-  position: absolute;
-}

@@ -1,7 +1,7 @@
 import { Fragment } from "react/jsx-runtime";
-import "./App.css";
-import Dot from "./Dot";
-import useApp from "./useApp";
+import '../../App.css'
+import Dot from "../../components/Dot";
+import useApp from "./hooks/useHome";
 
 function App() {
   const {handleDesfazer, handleRefazer, handleClickDiv, dots} = useApp();

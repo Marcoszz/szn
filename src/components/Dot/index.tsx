@@ -1,4 +1,4 @@
-import { TDot } from "../../types"
+import { TDot } from "../../screens/Home/types"
 import { Point } from "./styles"
 
 const Dot = ({x, y}: TDot) => {

@@ -1,6 +1,6 @@
 import '../../App.css';
 import Dot from "../../components/Dot";
-import { EHomeButtonAction } from "../../types";
+import { EHomeButtonAction } from "./types";
 import useApp from "./hooks/useHome";
 import { ButtonContainer, OutsideContainer } from './styles';
 

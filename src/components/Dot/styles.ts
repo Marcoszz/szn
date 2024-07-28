@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { TDot } from '../../types';
+import { TDot } from '../../screens/Home/types';
 
 export const Point = styled.div<TDot>`
     position: absolute;

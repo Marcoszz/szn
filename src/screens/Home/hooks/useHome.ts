@@ -1,5 +1,5 @@
 import { MouseEvent, useState } from "react"
-import { EHomeButtonAction, TDot } from "../../../types"
+import { EHomeButtonAction, TDot } from "../types"
 
 const useHome = () => {
     const [dots, setDots] = useState<TDot[]>([])

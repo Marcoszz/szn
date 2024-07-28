@@ -4,6 +4,6 @@ export type TDot = {
 }
 
 export enum EHomeButtonAction {
-    REMAKE,
-    UNDO
+    REMAKE = "Refazer",
+    UNDO = "Desfazer"
 }

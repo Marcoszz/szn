@@ -11,12 +11,12 @@ const Home = () => {
     <>
       <ButtonContainer>
         <button
-        style={{backgroundColor: 'red'}} 
+        className="bg-red-600" 
         onClick={() => handleHomeButtonAction(EHomeButtonAction.UNDO)}>
           {EHomeButtonAction.UNDO}
         </button>
         <button
-        style={{backgroundColor: 'green'}} 
+        className="bg-green-600" 
         onClick={() => handleHomeButtonAction(EHomeButtonAction.REMAKE)}>
           {EHomeButtonAction.REMAKE}
         </button>

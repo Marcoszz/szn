@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-export const OutsideContainer = styled.div`
-    height: 100vh;
-    width: 100%;
+export const OutsideContainer = styled.div.attrs({
+    className:'w-full h-screen' 
+})`
 `
-export const ButtonContainer = styled.div`
-    display: flex;
-    gap: 16px;
-    padding: 6px;
-`
+export const ButtonContainer = styled.div.attrs({
+    className: 'flex gap-4 p-1.5'
+})``

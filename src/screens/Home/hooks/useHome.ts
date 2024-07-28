@@ -1,39 +1,35 @@
 import { MouseEvent, useState } from "react"
-import { TDot } from "../../../types"
+import { EHomeButtonAction, TDot } from "../../../types"
 
-const useApp = () => {
+const useHome = () => {
     const [dots, setDots] = useState<TDot[]>([])
-    const [lastDot, setLastDot] = useState<TDot[]>([])
+    const [prevDots, setPrevDots] = useState<TDot[]>([])
 
-    const handleRefazer = () => {
-        const cLastDot = lastDot.pop()
+    const handleHomeButtonAction = (action: EHomeButtonAction) => {
+        let lastPrevDot;
 
-        if (!cLastDot) return 
-        
-        setLastDot(lastDot)
-        setDots([...dots, cLastDot ])
+        if (action === EHomeButtonAction.REMAKE) {
+            lastPrevDot = prevDots.pop()
+
+            setPrevDots(prevDots)
+            setDots(lastPrevDot ? [...dots, lastPrevDot] : [...dots])
+        } else if (action === EHomeButtonAction.UNDO) {
+            lastPrevDot = dots.pop()
+
+            setPrevDots(lastPrevDot ? [...prevDots, lastPrevDot] : [...prevDots])
+            setDots(dots)
+        }
     }
 
-    const handleDesfazer = () => {
-        const cLastDot = dots.pop()
-
-        if (!cLastDot) return 
-
-        setLastDot([...lastDot, cLastDot ])
-        setDots(dots)
-    }
-
-    const handleClickDiv = (e: MouseEvent) => {
+    const handleDivClick = (e: MouseEvent) => {
         setDots([...dots, {x: e.clientX, y: e.clientY}])
     }
 
     return {
-        handleRefazer,
-        handleDesfazer,
-        handleClickDiv,
+        handleHomeButtonAction,
+        handleDivClick,
         dots,
-        lastDot
     }
 }
 
-export default useApp
+export default useHome

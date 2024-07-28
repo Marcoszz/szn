@@ -5,5 +5,5 @@ export const OutsideContainer = styled.div.attrs({
 })`
 `
 export const ButtonContainer = styled.div.attrs({
-    className: 'flex gap-4 p-1.5'
+    className: 'absolute flex gap-4 p-3'
 })``

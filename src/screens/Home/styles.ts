@@ -7,5 +7,5 @@ export const OutsideContainer = styled.div`
 export const ButtonContainer = styled.div`
     display: flex;
     gap: 16px;
-    padding: 4px;
+    padding: 6px;
 `

@@ -3,10 +3,10 @@ import { TDot } from '../../screens/Home/types';
 
 export const Point = styled.div<TDot>`
     position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 4px;
-    background-color: aqua;
+    width: 6px;
+    height: 6px;
+    border-radius: 32px;
+    background-color: #646cff;
     left: ${props => props.x}px;
     top: ${props => props.y}px;
 `
